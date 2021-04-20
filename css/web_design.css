@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+ font-family: JosefinSans;
+ font-weight: 200;
+	
+src: url(../Fonts/Josefin_Sans/JosefinSans-Light.ttf);	
+	
+}
+
+@font-face{
+	font-family: JosefinSans;
+	font-weight: 700 ;
+	src: url(../Fonts/Josefin_Sans/JosefinSans-SemiBold.ttf);
+}
+
+.logo{
+    background-color: black;
+}
+
+/*Logo Page Button Effect*/
+.logo img {
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.logo img:hover {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+/*Logo Page Button Effect*/
+
+/*Website Image Layouts*/
+.col-lg-4 a .sit5 {
+    margin-top: 65px;
+}
+.col-lg-4 a .sit6 {
+    margin-top: 77px;
+    height: 415px;
+}
+
+/*Website Image Layouts*/
+
+.logo p{
+    color: white;
+    font-family: JosefinSans;
+    font-size: 95px;
+    float: right;
+    margin-right: 155px;
+    margin-top: 153px;
+}
+
+
+/*Loading screen*/
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+
+/*@keyframes fadeout {
+    from { opacity: 0; }
+    to   {opacity: 1; }
+} */
+
+
+div.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color: black;
+	z-index: 2;
+	
+	transition: opacity 1s;
+	
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	
+}   
+
+div.loader img{
+	
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
+	
+	/*animation: fadeout 3s infinite linear; */
+	
+    width: 650px;
+}
+
+div.loader.hidden{
+	opacity: 0;
+	pointer-events: none;
+}
+/* End of Loading screen*/
+
+
+
+/*Website Display Grid*/
+
+/*.websites {
+	
+  width: 75%;
+	height:100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+	display: grid;
+	grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 500px 300px; 
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+.websites img{
+	grid-column: span 1;
+	grid-row: span 2;
+	grid-gap: 10px 10px;
+	
+}
+
+
+.websites a {
+	position: relative;
+	
+	overflow: hidden;
+	width: 16.6666667%; /* Fallback */
+/*	width: -webkit-calc(100% / 6);
+	width: calc(100% / 6);
+}  */
+
+.container-fluid{
+	background-color: black;
+}
+
+.websites{
+    width: 1020px;
+    margin-top: 50px;
+    margin-left: 450px;
+    align-content: center;
+	
+}
+.sit1{
+	height: 525px;
+}
+.sit2{
+	height: 525px;
+}
+.sit3{
+	height: 525px;
+}
+.sit4{
+	height:525px;
+}
+
+
+
+.websites img{
+	grid-column: span 1;
+	grid-row: span 2;
+	grid-gap: 10px 10px;
+	
+}
+
+
+
+.websites  a,
+.websites  a img {
+	display: inline-grid;
+	width: 100%;
+	cursor: pointer;
+	
+}
+
+
+/* Flexbox is used for centering the heading */
+.websites  a div {
+	font-family:JosefinSans; 
+	font-weight: 700;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	background: rgba(71,163,218,0.2);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.websites  a:hover div {
+	opacity: 1;
+}
+
+.websites  a div h2 {
+	font-family:JosefinSans; 
+	font-weight: 700;
+	width: 100%;
+	color: #fff;
+	font-size: 1.4em;
+	letter-spacing: 4px;
+	padding: 0 10px;
+	line-height: 35px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+.websites {
+	width: 331px;
+	
+}
+.logo p {
+	font-size: 71px;
+	margin-right: 25px;
+}
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.logo p {
+	font-size: 55px;
+	margin-right: 36px;
+}
+.websites {
+	width: 292px;
+}
+	.sit1{
+	height: 425px;
+}
+.sit2{
+	height: 425px;
+}
+.sit3{
+	height: 425px;
+}
+.sit4{
+	height:425px;
+}
+}
+
+@media (min-width: 500px) and (max-width: 767px){
+.logo p {
+	font-size: 45px;
+	margin-right: 21px;
+	margin-top: 191px;
+}
+.websites {
+	width: 329px;
+	margin-left: 219px;
+}
+}
+
+@media (min-width: 350px) and (max-width: 507px){
+.logo p {
+	font-size: 35px;
+	margin-top: 121px;
+}
+.websites {
+	width: 272px;
+	margin-left: 92px;
+}
+.logo img {
+	width: 140px;
+}
+}
+
+@media (max-width: 440px){
+.logo p {
+	margin-top: 22px;
+	margin-left: 15px;
+	margin-right: 95px;
+}
+.logo a img {
+	margin-left: 133px;
+	width: 168px;
+}
+.websites {
+	padding-top: 68px;
+	margin-left: 64px;
+}
+}

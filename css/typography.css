@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+ font-family: JosefinSans;
+ font-weight: 200;
+	
+src: url(../Fonts/Josefin_Sans/JosefinSans-Light.ttf);	
+	
+}
+
+@font-face{
+	font-family: JosefinSans;
+	font-weight: 700 ;
+	src: url(../Fonts/Josefin_Sans/JosefinSans-SemiBold.ttf);
+}
+
+.logo{
+    background-color: black;
+   
+}
+
+/*Logo Page Button Effect*/
+.logo img {
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+.logo img:hover {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+/*Logo Page Button Effect*/
+
+.logo p{
+    color: white;
+    font-family: JosefinSans;
+    font-size: 95px;
+    float: right;
+    margin-right: 155px;
+    margin-top: 153px;
+}
+
+
+/*Loading screen*/
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+
+/*@keyframes fadeout {
+    from { opacity: 0; }
+    to   {opacity: 1; }
+} */
+
+
+div.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color: black;
+	z-index: 2;
+	
+	transition: opacity 1s;
+	
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	
+}   
+
+div.loader img{
+	-webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
+	
+	
+    /*animation: fadeout 3s infinite linear;*/
+    width: 350px;
+   
+}
+
+div.loader.hidden{
+	opacity: 0;
+	pointer-events: none;
+}
+/* End of Loading screen*/
+
+
+.container-fluid{
+	background-color: black;
+}
+
+/*Media Queries*/
+
+
+@media (max-width: 1075px){
+.logo p {
+	font-size: 60px;
+	margin-right: 50px;
+}
+	
+}
+
+@media (max-width: 742px){
+.logo p {
+	font-size: 45px;
+	padding-top: 0px;
+	margin-bottom: -25px;
+}
+}
+
+@media (max-width: 615px){
+	.logo img{
+	width: 148px;
+	}
+	.logo p{
+	margin-top: 143px;
+	font-size: 30px;
+	margin-right: 20px;
+	}
+}
+
+@media (max-width: 433px){
+.logo img {
+	width: 110px;
+}
+.logo p {
+	margin-top: 99px;
+	font-size: 25px;
+	padding-top: 11px;
+}
+	
+}
